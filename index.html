@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>fis3.vue</title>
+    <link rel="shortcut icon" type="image/ico" href="/static/favicon.ico">
+    <script type="text/javascript" src="/static/js/mod.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        require(['entry']);
+        window.token = function (name) {
+            if (window.location.href.indexOf('?') >= 0) {
+                var a = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+                var t;
+                var i = 0;
+                var l = a.length;
+                for (; i < l; i ++) {
+                    if ((t = a[i].split('='))[0] === name) return t[1];
+                }
+            }
+            return null;
+        }('token');
+    </script>
+</body>
+</html>

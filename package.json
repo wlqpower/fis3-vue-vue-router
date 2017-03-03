@@ -1,0 +1,34 @@
+{
+  "name": "fis3.project",
+  "description": "",
+  "dependencies": {
+    "element-ui": "^1.2.1",
+    "vue": "^2.1.10",
+    "vue-router": "^2.2.1",
+    "whatwg-fetch": "^2.0.1"
+  },
+  "devDependencies": {
+    "babel-helper-vue-jsx-merge-props": "^2.0.2",
+    "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-plugin-transform-vue-jsx": "^3.3.0",
+    "babel-polyfill": "^6.23.0",
+    "buffer": "^5.0.5",
+    "fis-parser-babel-5.x": "^1.4.0",
+    "fis-parser-less-2.x": "^0.1.4",
+    "fis3-hook-commonjs": "^0.1.26",
+    "fis3-hook-node_modules": "^2.2.8",
+    "fis3-optimizer-dfy-html-minifier": "^1.0.1",
+    "fis3-parser-typescript": "^1.1.1",
+    "fis3-parser-vue-component": "^5.2.0",
+    "fis3-postpackager-loader": "^2.1.4",
+    "fis3-preprocessor-autoprefixer": "^0.1.1",
+    "fis3-preprocessor-js-require-css": "^0.1.1",
+    "is-buffer": "^1.1.4",
+    "process": "^0.11.9"
+  },
+  "scripts": {
+    "start": "fis3 server stop && fis3 server clean && fis3 release -c && fis3 server start -p 8888",
+    "build": "rm -rf build .build.war && fis3 release production -d ./build && tar -cf .build.war ./build",
+    "commit": "npm run build && git add . && git commit -m commit"
+  }
+}
