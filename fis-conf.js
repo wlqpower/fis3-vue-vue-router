@@ -11,7 +11,7 @@ fis.hook('commonjs', { baseUrl: '/src', extList: ['.js', '.vue', '.es6'] });
 fis.match('{/node_modules/**.js,*.{vue,es6}}', { isMod: true });
 
 // 编译 vue es6
-fis.match('{*.vue:js,*.es6}', {
+fis.match('*.{vue:js,es6}', {
     preprocessor: fis.plugin('js-require-css'),
     parser: fis.plugin('babel-5.x', {
         sourceMaps: true,
