@@ -20,7 +20,9 @@ fis.match('*.{vue:js,es6}', {
     rExt: 'js'
 })
 .match('*.vue', {
-    parser: fis.plugin('vue-component'),
+    parser: fis.plugin('vue-component', {
+        runtimeOnly: true
+    }),
     rExt: 'js'
 });
 
