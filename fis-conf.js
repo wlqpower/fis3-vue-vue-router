@@ -1,5 +1,5 @@
 /* eslint-disable */
-fis.set('project.ignore', fis.get('project.ignore').concat('package.json', 'BCLOUD', 'build/**'));
+fis.set('project.ignore', fis.get('project.ignore').concat('package.json', '*.md', 'BCLOUD', 'build/**'));
 // 启用 node_modules  依赖
 fis.hook('node_modules').unhook('components');
 // 启用 commonjs 模块化规范
