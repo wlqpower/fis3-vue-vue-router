@@ -10,6 +10,7 @@ fis.hook('commonjs', { baseUrl: '/src', extList: ['.js', '.vue', '.es6'] });
 // 模块化 js
 fis.match('{/node_modules/**.js,*.{vue,es6}}', { isMod: true });
 
+
 // 编译 vue es6
 fis.match('*.{vue:js,es6}', {
     preprocessor: fis.plugin('js-require-css'),
@@ -26,6 +27,7 @@ fis.match('*.{vue:js,es6}', {
     rExt: 'js'
 });
 
+
 // 打包
 fis.match('::package', {
     postpackager: fis.plugin('loader', {
@@ -33,6 +35,7 @@ fis.match('::package', {
         resourcemapWhitespace: 0
     })
 });
+
 
 // 上线
 fis.media('production')
