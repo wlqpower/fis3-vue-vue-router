@@ -28,7 +28,7 @@
   },
   "scripts": {
     "start": "fis3 server stop && fis3 server clean && fis3 release -c && fis3 server start -p 8888",
-    "build": "rm -rf build .build.war && fis3 release production -d ./build && tar -cf .build.war ./build",
+    "build": "rm -rf build .build.war && fis3 release production -cd ./build && tar -cf .build.war ./build",
     "commit": "npm run build && git add . && git commit -m commit"
   }
 }
