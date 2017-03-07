@@ -29,7 +29,7 @@ fis.match('*.{vue:js,es6}', {
 
 
 // 打包
-fis.match('::package', {
+fis.match('/node_modules/**.js', { packTo: '/node_modules/third.js' }).match('::package', {
     postpackager: fis.plugin('loader', {
         useInlineMap: true,
         resourcemapWhitespace: 0
