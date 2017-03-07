@@ -19,8 +19,8 @@ fis.match('*.{vue:js,es6}', {
         optional: ['es7.decorators', 'es7.classProperties']
     }),
     rExt: 'js'
-})
-.match('*.vue', {
+});
+fis.match('*.vue', {
     parser: fis.plugin('vue-component', {
         runtimeOnly: true
     }),
